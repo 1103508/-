@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function setMask() {
+      // Get the input elements
+      var input1 = document.getElementById("input1");
+      var input2 = document.getElementById("input2");
+      
+      // Set the maxlength and pattern for the first input
+      input1.maxLength = 12;
+      input1.pattern = "[0-9]{12}";
+      
+      // Set the value for the second input with $ sign in the end
+      input2.value = "$";
+    }
+  </script>
+</head>
+<body onload="setMask()">
+  <form>
+   
+    <input type="text" id="input1" required>
+     <label>input mask number 12 digits</label>
+    <br>
+    
+    <input type="text" id="input2" required>
+    <label>input mask curency is prefix $ (dollar)</label>
+  </form>
+</body>
+</html>
